@@ -1,0 +1,38 @@
+<div class="page-header">
+	<h1>Employee List</h1>
+</div>
+<div class="col-md-12">
+	<div class="table-responsive">
+		<table class="table table-bordered">
+			<tr>
+				<th>Name</th>
+				<th>Gender</th>                            
+				<th>DOB</th>
+				<th>Address</th>
+				<th>Phone</th>
+				<th>Email</th>
+				<th>Language</th>
+				<th>Edit</th>
+				<th>Delete</th>
+			</tr>
+			<tr *ngFor="let employee of allEmployees">
+				<td>{{employee.EmpName}}</td>
+				<td>{{employee.Gender == 1? 'Male' : 'Female'}}</td>
+				<td>{{employee.DateOfBirth | date:'dd/MM/yyyy' }}</td>
+				<td>{{employee.Address}}</td>
+				<td>{{employee.Phone}}</td>
+				<td>{{employee.EmailId}}</td>
+				<td>{{employee.Language}}</td>
+				<td>
+					<button type="button" class="btn btn-info" (click)="loadEmployeeToEdit(employee.EmpId)">Edit</button>
+				</td>
+				<td>
+					<button type="button" class="btn btn-danger" (click)="deleteEmployee(employee.EmpId)">Delete</button>
+				</td>
+			</tr>
+		</table>
+	</div>
+	<div style="float: left;">
+		<a href="#" [routerLink]="['/employee']">Add New Employee +</a>
+	</div>
+</div>

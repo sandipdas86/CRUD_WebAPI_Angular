@@ -1,0 +1,1 @@
+export const api_endpoint = 'http://localhost:19485/api/Employee';
