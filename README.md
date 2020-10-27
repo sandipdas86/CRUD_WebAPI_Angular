@@ -1,2 +1,2 @@
-# CRUD_WebAPI_Angular2-
+# CRUD_WebAPI_Angular
 This is a CRUD angular app
